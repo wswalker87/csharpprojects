@@ -3,3 +3,27 @@ int daysUntilExpiration = random.Next(12);
 int discountPercentage = 0;
 
 // Your code goes here
+
+
+if (daysUntilExpiration == 0)
+{
+    //Already expired
+Console.WriteLine("Your subscription has expired.");
+}
+else if (daysUntilExpiration == 1)
+{
+    //1 day
+discountPercentage = 20;
+Console.WriteLine($"Your subscription expires within a day!\nRenew now and save {discountPercentage}%");
+}
+else if ((daysUntilExpiration >= 2) && (daysUntilExpiration <= 4))
+{
+    //5 days or less
+discountPercentage = 10;
+Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.\nRenew now and save {discountPercentage}%");
+}
+else if ((daysUntilExpiration >= 6) && (daysUntilExpiration <= 9))
+//10 days or less
+{
+Console.WriteLine("Your subscription will expire soon. Renew now!");
+}
